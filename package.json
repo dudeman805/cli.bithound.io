@@ -21,7 +21,8 @@
     "git-origin-url": "^0.3.0",
     "git-rev-sync": "^1.6.0",
     "open": "0.0.5",
-    "request": "^2.67.0"
+    "request": "^2.67.0",
+    "snyk": "^*"
   },
   "devDependencies": {
     "express": "^4.13.3",
@@ -32,6 +33,9 @@
   "scripts": {
     "lint": "semistandard",
     "pretest": "npm run lint",
-    "test": "tap tests/unit/*.js"
-  }
+    "test": "tap tests/unit/*.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
